@@ -27,6 +27,7 @@ for i in range (1,31):
         allfiles = os.listdir(processing)
         for k in allfiles:
             os.rename(processing +'/'+ k, queue+'/'+ k)
+            time.sleep(1)
         all_file = os.listdir(queue)
         for j in all_file:
             query1 = "UPDATE table SET check = %s WHERE FileName = %s"
